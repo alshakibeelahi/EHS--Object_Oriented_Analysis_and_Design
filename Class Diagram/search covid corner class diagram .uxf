@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>100</y>
+      <w>260</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>User
+--
+
++information:string
++choose:boolean
+
+--
++searchCovidecorner(information:string):void
++searchIcu(choose:boolean):string
++booking():boolean
++searchVentilator(choose:boolean):int
++booking():boolean
++searchCovideunit(choose:boolean):int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>550</x>
+      <y>140</y>
+      <w>260</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>System
+--
+
+--
++checkIcu():int;
++checkVentilator():int
++checkCovideunit():int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>330</y>
+      <w>260</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Combine Hospital database system
+--
++choose:boolean
+--
++checkIcu(choose:boolean):int
++displayMsg(sucess):void
++displayMsg(error):void
++checkList(choose:boolean):void
++displayMsg(sucess):void
++displayMsg(error):void
++checkList(choose:boolean):int
++displayMsg(sucess):void
++displayMsg(error):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>200</x>
+      <y>400</y>
+      <w>260</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Patient Portal database
+--
+
+--
++showList(sucessful):int
++showList(empty):int
++showList(sucessful):int
++showList(empty):int
++showList(sucessful):int
++showList(empty):int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>220</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>250</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>470</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+</diagram>

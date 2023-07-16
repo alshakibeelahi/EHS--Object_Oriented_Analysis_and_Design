@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>624</x>
+      <y>360</y>
+      <w>360</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Registration
+--
++userName: String
++userEmail: String
+-userPhoneNumber: int
+-userLocation: String
+-Password: String
+--
++Registration()
++setPatientName(userName: String):void
++setPass(Password: String):void
++setloctEmail(userEmail: String):void
++setPhoneNumber(Password: int):int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>664</x>
+      <y>696</y>
+      <w>360</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>PatientPortal 
+--
+
+--
+PatientPortal()
+searchPatirnt(userName: String,userEmail: String):patientPortal</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>472</x>
+      <y>552</y>
+      <w>248</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>OTP
+--
+
+--
+otp():int
+matchOTP():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>712</x>
+      <y>512</y>
+      <w>64</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;130.0;60.0;130.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>824</x>
+      <y>512</y>
+      <w>24</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;230.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1136</x>
+      <y>352</y>
+      <w>360</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>DriverInfo
+--
++Licence:String
++VeicleLicence: String
+--
+DriverInfo()
+searchDriver(Licence: String,VeicleLicence: String):patientPortal</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>136</x>
+      <y>368</y>
+      <w>360</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>AdminPortal 
+--
+
+--
+AdminPortal()
+searchAdmin(userName: String,userEmail: String):adminPortal</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>488</x>
+      <y>440</y>
+      <w>152</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+</diagram>

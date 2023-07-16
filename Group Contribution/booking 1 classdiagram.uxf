@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>77</x>
+      <y>143</y>
+      <w>330</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>User
+--
+-bookingInformation:string
+-name:string
+--
++pressBooking():void
++showAmmount(bookingInformation:string):int
++confirmBooking(name:string):boolean
++makepayment():int
++cancelBooking():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>539</x>
+      <y>143</y>
+      <w>297</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>System
+--
+-msgInfo:string
+
+--
++getAmmount():int
++displayAmmount():int
++confirmBooking():string
++displaysucessMsg(mshInfo:string):string
++cancelBooking(msgInfo:string):string
++displaycancelMsg(msgInfo:string):string
++sucessfulMessage():string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>561</x>
+      <y>440</y>
+      <w>242</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Patient Portal database system
+--
+
+--
++returnAmmount():int
++sucessfulMsg():string
++cancelMsg():string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>220</y>
+      <w>165</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>
+</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>671</x>
+      <y>330</y>
+      <w>33</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+</diagram>

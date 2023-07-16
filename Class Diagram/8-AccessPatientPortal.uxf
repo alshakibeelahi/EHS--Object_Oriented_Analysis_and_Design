@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>187</x>
+      <y>132</y>
+      <w>341</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>AccessTestReport
+--
+-type: string
+--
++displayReport(): File
++displayMessage(): string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>308</x>
+      <y>396</y>
+      <w>484</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>PatientPortalController
+--
+-pid: int
+-testReport: File
+--
++searchPatient(pid: int): boolean
++searchReport(report: File): boolean
++returnReport(): File
++returnMessage(): string
++addHealthReport(comments: string, time: string, date: string): void
++getHealthReport(): void
++returnHealthReport(): string
++displayMessage(): string
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>341</x>
+      <y>220</y>
+      <w>165</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>130.0;160.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>561</x>
+      <y>44</y>
+      <w>341</w>
+      <h>187</h>
+    </coordinates>
+    <panel_attributes>AccessHealthReport
+--
+-comments: string
+-time: string
+-date: string
+--
++setComments(comments): void
++addTimeAndDate(time: string, date: string): void
++displayMessage(): string
++showHealthReport(): void
++displayHealthReport(): string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>594</x>
+      <y>220</y>
+      <w>176</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;160.0;140.0;10.0</additional_attributes>
+  </element>
+</diagram>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>304</x>
+      <y>72</y>
+      <w>296</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Admin
+
+--
+-hospitalName():string
+-code:int
+--
++updateCovidecorner(internalCovidsectionInfo:string):void
++updateICU(internalCovidsectionInfo:string):void
+-enterICUBedNo():int
+-enterICUWardNo():int
++setICU(number:int):void
++updateVentilator(internalCovidsectionInfo:string):void
+-enterVentilatorBedNo():int
+-enterVentilatorWardNo():int
++setVentilator(number:int):void
++updateCovidcorner(internalCovidsectionInfo:string):void
+-enterCovidcornerBedNo():int
+-enterCovidcornerWardNo():int
++setCovidcorner(number:int):void
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>464</x>
+      <y>400</y>
+      <w>216</w>
+      <h>232</h>
+    </coordinates>
+    <panel_attributes>System
+
+--
+-number:int
+--
++getICU(number:int):void
++success():void
++getVentilator(number:int):void
++success():void
++getCovidcorner(number:int):void
++success():void
+-updateChanges():int
+-ICUList():int
+-ventilatorList():int
+-covidcornerList():int
++display(updateInfo:string):void
++successful():void
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>744</x>
+      <y>192</y>
+      <w>256</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Combine database Controlere
+
+--
+-internalCovidsectionInfo:string
+-number:int
+--
++return():void
++return():void
++return():void
++done():void
++error(backUpdateCovidcorner):void
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>576</x>
+      <y>304</y>
+      <w>24</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>336</y>
+      <w>160</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>180.0;10.0;180.0;180.0;10.0;180.0</additional_attributes>
+  </element>
+</diagram>

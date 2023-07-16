@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>290</x>
+      <y>130</y>
+      <w>310</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>AccessReport
+--
+-type: string
+-testReport: File
+--
++AccessReport()
++setType(type: string): void
++setReport(testReport: File): void
++getReport(type): void
++displayReport(): File
++displayMessage(): string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>290</x>
+      <y>370</y>
+      <w>310</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>PatientPortalController
+--
+-report: File
+--
+PatientPortalController()
++matchType(type): boolean
++overWriteReport(testReport): void
++addReport(testReport: File): void
++searchReport(type: string): boolean
+returnReport(): File
++returnMessage(): string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>290</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

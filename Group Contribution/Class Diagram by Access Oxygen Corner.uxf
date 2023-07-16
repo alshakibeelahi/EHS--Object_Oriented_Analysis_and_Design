@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>117</x>
+      <y>0</y>
+      <w>207</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>Admin
+--
+-code:int
+--
++accessOxygenCorner():void
++showCurrentStock():int
+-orderRequiredStock():int
+-enterQantity():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>432</x>
+      <y>0</y>
+      <w>189</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>CheckOxygenAvailability
+--
+-number:int
+--
+CheckOxygenAvailability()
+-getCurrentStock():int
++askForQuantity():int
++display()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>423</x>
+      <y>162</y>
+      <w>207</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>CombinedHospital
+Database
+--
+-number:int
+--
++return()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>315</x>
+      <y>54</y>
+      <w>135</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>513</x>
+      <y>99</y>
+      <w>27</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>702</x>
+      <y>144</y>
+      <w>207</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>Nurse or 
+Ward Boy
+(on duty)
+--
+-code:int
+--
++updateCurrnetOxygenUses():int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>423</x>
+      <y>333</y>
+      <w>189</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>System
+--
+-number:int
+--
+-getUpdate():int
++display()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>621</x>
+      <y>198</y>
+      <w>99</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>702</x>
+      <y>18</y>
+      <w>198</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>Supplier
+--
+-internalAccessOxygenInfo:string
+--
+-success:void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>612</x>
+      <y>45</y>
+      <w>108</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

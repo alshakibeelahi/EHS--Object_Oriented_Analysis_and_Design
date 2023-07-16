@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text/>
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>189</x>
+      <y>486</y>
+      <w>189</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>MakePayment
+--
+-acountNumber: int
+-pin: int
+-opt: int
+--
+MakePayment()
+setAccountNumber(accountNumber: int): void
+setPin(pin: int): void
+setOTP(otp: int): void
++displayMessage(): string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>261</y>
+      <w>387</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>CardValidationController
+--
+-expDate: string
+-validationCode: int
+--
++CardValidationController()
++checkInfo(accountNumber: int, expDate: string, pass: int): boolean
++checkVerificationCode(otp: int): boolean
++deductMoney(amount: int): void
++returnMessage(): string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>423</y>
+      <w>387</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>BkashValidationController
+--
+-validationCode: int
+--
++BkashValidationController()
++checkInfo(phoneNumber: int): boolean
++checkVerificationCode(otp: int): boolean
++checkPIN(pin: int): boolean
++deductMoney(amount: int): void
++returnMessage(): string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>594</y>
+      <w>387</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>NagadValidationController
+--
+-validationCode: int
+--
++NagadValidationController()
++checkInfo(phoneNumber: int): boolean
++checkVerificationCode(otp: int): boolean
++checkPIN(pin: int): boolean
++deductMoney(amount: int): void
++returnMessage(): string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>765</y>
+      <w>387</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>OnPaymentController
+--
+
+--
++OnPayementController()
++returnMessage(): string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>171</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>369</x>
+      <y>324</y>
+      <w>153</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;220.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>369</x>
+      <y>495</y>
+      <w>153</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>369</x>
+      <y>576</y>
+      <w>153</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>369</x>
+      <y>612</y>
+      <w>153</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;220.0</additional_attributes>
+  </element>
+</diagram>

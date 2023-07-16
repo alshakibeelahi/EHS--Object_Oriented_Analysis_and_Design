@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>376</x>
+      <y>320</y>
+      <w>288</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>TransportController
+--
+
+--
+TransPortController()
++searchAmbulance(location: string, type: string): boolean
++isFound(): boolean
++returnDetails(): string
++startCounting(startTime: int): void
++stopCounting(endTime: int): void
++calculate(startTime: int, endTime: int): int
++returnTotalAmount(): int
++removeAllChoices(): void
++updateLocation(location): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>512</x>
+      <y>528</y>
+      <w>168</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>DriverInfo
+--
+-location: string
+--
+DriverInfo()
++setLocation(location: string): void
++displayMessage(): string
++displayUserInfo(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>56</y>
+      <w>224</w>
+      <h>232</h>
+    </coordinates>
+    <panel_attributes>NeedTransport
+--
+-location: string
+-type: string
+-startTime: int
+-endTime: int
+--
++setPickUpPoint(location: string): void
++setType(tyoe: string): void
++isBooked(): boolean
++setPickUpTime(startTime: int): void
++displayCounting(): int
++isReached(): boolean
++setReachTime(endTime: int): void
++displayAmount(): int
++clearAllChoices(): void
++displayMessage(): string
++displayDetails(): string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>280</y>
+      <w>24</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>488</y>
+      <w>104</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>336</x>
+      <y>528</y>
+      <w>168</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>PatientPortalController
+--
+
+--
+PatientPortalController()
++getPickUpPoint(): string
++getUserInfo(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>408</x>
+      <y>488</y>
+      <w>96</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+</diagram>

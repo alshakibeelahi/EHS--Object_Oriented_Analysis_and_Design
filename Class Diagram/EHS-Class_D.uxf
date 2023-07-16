@@ -1,0 +1,1078 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text/>
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>592</x>
+      <y>236</y>
+      <w>120</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstruct&gt;&gt;
+LogIn
+--
++userName: String
+-Password: String
+--
++LogIn()
++setAdminName(userName: String):void
++setPass(Password: String):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>392</x>
+      <y>244</y>
+      <w>172</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Admin
+--
+
+--
++Admin()
++searchAdmin(userName: String,Password: String):adminPortal</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>572</x>
+      <y>320</y>
+      <w>168</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Patient
+--
+
+--
++Patient()
++searchPatient(userName: String,Password: String):patientPortal</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>472</y>
+      <w>104</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>PatientPortalController
+--
+-choice: ArrayList
+--
++PatientPortalController()
++addChoice(): boolean
++returnMessage(): string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>468</x>
+      <y>384</y>
+      <w>84</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>SearchCovidCorner
+--
+
+--
+searchCovidCorner()
++searchICU(): boolean
++searchVenrilator(): boolean
++searchCovidUnit(): boolean
++displayMessage(): string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>468</y>
+      <w>104</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>CombinedHospitalDatabaseController
+--
+-icuList: ArrayList
+-ventilatorList: ArrayList
+-covidUnitList: ArrayList
+--
++CombinedHospitalDatabaseController()
++matchChoice(): boolean
++searchICU(): boolean
++retuenDetails(): string
++returnMessage(): string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>588</x>
+      <y>388</y>
+      <w>84</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>ProceedToBooking
+--
+-amount: int
+--
++getAmount(): void
++setBooking(): void
++displayMessage(): string
++eraseBooking(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>588</x>
+      <y>464</y>
+      <w>84</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>PatientDataBaseController
+--
+totalAmount: int
+--
++calculateAmount(): void
++returnAmount(): int
++confirmBooking(): boolean
++returnMessage(): string
++clearBooking(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>728</x>
+      <y>440</y>
+      <w>84</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+MakePayment
+--
+-acountNumber: int
+-pin: int
+-opt: int
+--
+MakePayment()
+setAccountNumber(accountNumber: int): void
+setPin(pin: int): void
+setOTP(otp: int): void
++displayMessage(): string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>656</x>
+      <y>548</y>
+      <w>172</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>CardValidationController
+--
+-expDate: string
+-validationCode: int
+--
++CardValidationController()
++checkInfo(accountNumber: int, expDate: string, pass: int): boolean
++checkVerificationCode(otp: int): boolean
++deductMoney(amount: int): void
++returnMessage(): string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>876</x>
+      <y>556</y>
+      <w>172</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>BkashValidationController
+--
+-validationCode: int
+--
++BkashValidationController()
++checkInfo(phoneNumber: int): boolean
++checkVerificationCode(otp: int): boolean
++checkPIN(pin: int): boolean
++deductMoney(amount: int): void
++returnMessage(): string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>876</x>
+      <y>484</y>
+      <w>172</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>NagadValidationController
+--
+-validationCode: int
+--
++NagadValidationController()
++checkInfo(phoneNumber: int): boolean
++checkVerificationCode(otp: int): boolean
++checkPIN(pin: int): boolean
++deductMoney(amount: int): void
++returnMessage(): string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>876</x>
+      <y>444</y>
+      <w>80</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>OnPaymentController
+--
+
+--
++OnPayementController()
++returnMessage(): string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>232</x>
+      <y>368</y>
+      <w>124</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>AccessReport
+--
+-type: string
+-testReport: File
+--
++AccessReport()
++setType(type: string): void
++setReport(testReport: File): void
++getReport(type): void
++displayReport(): File
++displayMessage(): string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>192</x>
+      <y>468</y>
+      <w>124</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>PatientPortalController
+--
+-report: File
+--
+PatientPortalController()
++matchType(type): boolean
++overWriteReport(testReport): void
++addReport(testReport: File): void
++searchReport(type: string): boolean
+returnReport(): File
++returnMessage(): string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>968</x>
+      <y>316</y>
+      <w>144</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>TransportController
+--
+
+--
+TransPortController()
++searchAmbulance(location: string, type: string): boolean
++isFound(): boolean
++returnDetails(): string
++startCounting(startTime: int): void
++stopCounting(endTime: int): void
++calculate(startTime: int, endTime: int): int
++returnTotalAmount(): int
++removeAllChoices(): void
++updateLocation(location): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>984</x>
+      <y>212</y>
+      <w>84</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>DriverInfo
+--
+-location: string
+--
+DriverInfo()
++setLocation(location: string): void
++displayMessage(): string
++displayUserInfo(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>808</x>
+      <y>316</y>
+      <w>112</w>
+      <h>116</h>
+    </coordinates>
+    <panel_attributes>NeedTransport
+--
+-location: string
+-type: string
+-startTime: int
+-endTime: int
+--
++setPickUpPoint(location: string): void
++setType(tyoe: string): void
++isBooked(): boolean
++setPickUpTime(startTime: int): void
++displayCounting(): int
++isReached(): boolean
++setReachTime(endTime: int): void
++displayAmount(): int
++clearAllChoices(): void
++displayMessage(): string
++displayDetails(): string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>824</x>
+      <y>256</y>
+      <w>84</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>PatientPortalController
+--
+
+--
+PatientPortalController()
++getPickUpPoint(): string
++getUserInfo(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>324</y>
+      <w>124</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>AccessTestReport
+--
+-type: string
+--
++displayReport(): File
++displayMessage(): string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>316</y>
+      <w>176</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>PatientPortalController
+--
+-pid: int
+-testReport: File
+--
++searchPatient(pid: int): boolean
++searchReport(report: File): boolean
++returnReport(): File
++returnMessage(): string
++addHealthReport(comments: string, time: string, date: string): void
++getHealthReport(): void
++returnHealthReport(): string
++displayMessage(): string
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>224</x>
+      <y>248</y>
+      <w>124</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>AccessHealthReport
+--
+-comments: string
+-time: string
+-date: string
+--
++setComments(comments): void
++addTimeAndDate(time: string, date: string): void
++displayMessage(): string
++showHealthReport(): void
++displayHealthReport(): string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>108</x>
+      <y>80</y>
+      <w>184</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>CombinedHospitalDatabaseController
+--
+-icuList: ArrayList
+-ventilatorList: ArrayList
+-covidUnitList: ArrayList
+--
+CombinedHospitalDatabaseController()
++matchCovidCorner(bedNo: string, unitNo: string, type: string): boolean
++addCovidCorner(bedNo: string, unitNo: string, type: string): void
++returnMessage(): string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>256</x>
+      <y>172</y>
+      <w>84</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>UpdateCovidCorner
+--
+-type: string
+-bedNo: string
+-unitNo: string
+--
++UpdateCovidCorner()
++setBedNo(bedNo: string): void
++setUnitNo(unitNo: string): void
++getType(type: string): void
++displayMessage(): string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>436</x>
+      <y>164</y>
+      <w>84</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>CheckOxygenAvailability
+--
+-number:int
+--
+CheckOxygenAvailability()
+-getCurrentStock():int
++askForQuantity():int
++display()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>432</x>
+      <y>96</y>
+      <w>92</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>CombinedHospital
+Database
+--
+-number:int
+--
++return()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>424</x>
+      <y>16</y>
+      <w>112</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>Nurse or 
+Ward Boy
+(on duty)
+--
+-code:int
+--
++updateCurrnetOxygenUses():int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>316</x>
+      <y>96</y>
+      <w>88</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Supplier
+--
+-internalAccessOxygenInfo:string
+--
++getOrder()
+-success:void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>572</x>
+      <y>104</y>
+      <w>180</w>
+      <h>92</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Registration
+--
+-userName: String
+-userPhoneNumber: int
+-userAddress: String
+-Password: String
+-enteredOTP: int
+--
++Registration()
++setPatientName(userName: String):void
++setPass(Password: String):void
++setloctEmail(userEmail: String):void
++setPhoneNumber(Password: int):int
++setOPT(enteredOTP: int): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>68</y>
+      <w>168</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>PatientPortal 
+--
+
+--
+PatientPortal()
+searchPatirnt(userName: String,instID: String):patientPortal</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>556</x>
+      <y>28</y>
+      <w>96</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>OTP
+--
+otp():int
+--
+matchOTP(enteredOTP: int):boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>116</y>
+      <w>180</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>TransPortalSystem
+--
++LicenceNo:String
++VehcleLicence:String
++VeichleType:String
+--
++TransportalSystem()
++getLicence():DriverInfo
++getVehcleLicence():DriverInfo
++getVehcleType():DriverInfo
+searchDriver(Licence: String,VeicleLicence: String):patientPortal</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>656</x>
+      <y>16</y>
+      <w>164</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>AdminPortal 
+--
+-instID: string
+--
++AdminPortal()
++setInstID(instID: string): void
+searchAdmin(userName: String,userEmail: String):adminPortal</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>652</x>
+      <y>192</y>
+      <w>12</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>604</x>
+      <y>52</y>
+      <w>12</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>744</x>
+      <y>204</y>
+      <w>168</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Driver
+--
+
+--
++Driver()
++searchDriver(userName: String,Password: String):patientPortal</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>260</y>
+      <w>40</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>648</x>
+      <y>284</y>
+      <w>12</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>708</x>
+      <y>236</y>
+      <w>44</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>736</x>
+      <y>340</y>
+      <w>40</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0;80.0;250.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>768</x>
+      <y>508</y>
+      <w>12</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>808</x>
+      <y>504</y>
+      <w>76</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>808</x>
+      <y>476</y>
+      <w>76</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;90.0;170.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>808</x>
+      <y>456</y>
+      <w>76</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>412</x>
+      <y>276</y>
+      <w>12</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>344</x>
+      <y>272</y>
+      <w>56</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>212</x>
+      <y>344</y>
+      <w>156</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;370.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>548</x>
+      <y>396</y>
+      <w>48</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>472</x>
+      <y>208</y>
+      <w>12</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>668</x>
+      <y>384</y>
+      <w>148</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>350.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>352</x>
+      <y>328</y>
+      <w>228</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>550.0;10.0;370.0;10.0;370.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>668</x>
+      <y>400</y>
+      <w>72</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0;160.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>536</x>
+      <y>348</y>
+      <w>44</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>916</x>
+      <y>356</y>
+      <w>60</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>904</x>
+      <y>276</y>
+      <w>76</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0;170.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1024</x>
+      <y>256</y>
+      <w>12</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>908</x>
+      <y>224</y>
+      <w>84</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>728</x>
+      <y>276</y>
+      <w>104</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0;240.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>472</x>
+      <y>132</y>
+      <w>12</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>472</x>
+      <y>64</y>
+      <w>12</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>112</y>
+      <w>40</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>200</y>
+      <w>80</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;10.0;180.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>264</x>
+      <y>136</y>
+      <w>12</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>248</x>
+      <y>432</y>
+      <w>12</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>148</x>
+      <y>272</y>
+      <w>84</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>384</x>
+      <y>408</y>
+      <w>92</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>436</y>
+      <w>12</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>624</x>
+      <y>432</y>
+      <w>12</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>656</x>
+      <y>52</y>
+      <w>12</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>716</x>
+      <y>80</y>
+      <w>72</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>748</x>
+      <y>144</y>
+      <w>40</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

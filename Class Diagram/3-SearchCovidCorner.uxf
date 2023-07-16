@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>12</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>636</x>
+      <y>360</y>
+      <w>312</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>PatientPortalController
+--
+-choice: ArrayList
+--
++PatientPortalController()
++addChoice(): boolean
++returnMessage(): string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>480</x>
+      <y>108</y>
+      <w>252</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>SearchCovidCorner
+--
+
+--
+searchCovidCorner()
++searchICU(): boolean
++searchVenrilator(): boolean
++searchCovidUnit(): boolean
++displayMessage(): string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>252</x>
+      <y>360</y>
+      <w>312</w>
+      <h>204</h>
+    </coordinates>
+    <panel_attributes>CombinedHospitalDatabaseController
+--
+-icuList: ArrayList
+-ventilatorList: ArrayList
+-covidUnitList: ArrayList
+--
++CombinedHospitalDatabaseController()
++matchChoice(): boolean
++searchICU(): boolean
++retuenDetails(): string
++returnMessage(): string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>320</y>
+      <w>460</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>CombinedHospitalDatabaseController
+--
+-icuList: ArrayList
+-ventilatorList: ArrayList
+-covidUnitList: ArrayList
+--
+CombinedHospitalDatabaseController()
++matchCovidCorner(bedNo: string, unitNo: string, type: string): boolean
++addCovidCorner(bedNo: string, unitNo: string, type: string): void
++returnMessage(): string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>130</y>
+      <w>210</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>UpdateCovidCorner
+--
+-type: string
+-bedNo: string
+-unitNo: string
+--
++UpdateCovidCorner()
++setBedNo(bedNo: string): void
++setUnitNo(unitNo: string): void
++getType(type: string): void
++displayMessage(): string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
